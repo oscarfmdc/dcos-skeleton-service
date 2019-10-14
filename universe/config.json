@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "properties": {
+    "service": {
+      "type": "object",
+      "description": "DC/OS service configuration properties",
+      "properties": {
+        "name": {
+          "description": "The name of the service instance",
+          "type": "string",
+          "default": "skeleton"
+        },
+        "user": {
+          "description": "The user that the service will run as.",
+          "type": "string",
+          "default": "nobody"
+        },
+        "log_level": {
+          "description": "The log level for the DC/OS service.",
+          "type": "string",
+          "enum": [
+            "OFF",
+            "FATAL",
+            "ERROR",
+            "WARN",
+            "INFO",
+            "DEBUG",
+            "TRACE",
+            "ALL"
+          ],
+          "default": "INFO"
+        }
+      }
+    },
+    "skeletonpod": {
+      "description": "skeletonpod configuration properties",
+      "type": "object",
+      "properties": {
+        "cpus": {
+          "description": "skeletonpod CPU requirements",
+          "type": "number",
+          "default": 1
+        },
+        "gpus": {
+          "description": "skeletonpod GPU requirements",
+          "type": "number",
+          "default": 0.0
+        },
+        "mem": {
+          "description": "skeletonpod mem requirements (in MB)",
+          "type": "integer",
+          "default": 2048
+        },
+        "disk": {
+          "description": "skeletonpod persistent disk requirements (in MB)",
+          "type": "integer",
+          "default": 10000
+        },
+        "count": {
+          "description": "Number of skeletonpod pods to run",
+          "type": "integer",
+          "default": 1
+        }
+      },
+      "required": [
+        "cpus",
+        "mem",
+        "disk",
+        "count"
+      ]
+    }
+  }
+}

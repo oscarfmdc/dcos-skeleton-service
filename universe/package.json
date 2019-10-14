@@ -1,0 +1,13 @@
+{
+  "packagingVersion": "3.0",
+  "minDcosReleaseVersion": "1.9",
+  "name": "skeleton",
+  "version": "{{package-version}}",
+  "maintainer": "oscarfmdc@gmail.com",
+  "description": "Skeleton service on DC/OS",
+  "selected": false,
+  "framework": true,
+  "tags": ["example", "reference", "skeleton"],
+  "postInstallNotes": "The DC/OS skeleton service is being installed!\n\n\tDocumentation: {{documentation-path}}\n\tIssues: {{issues-path}}",
+  "postUninstallNotes": "The DC/OS skeleton service is being uninstalled.\n\nFor DC/OS versions from 1.10 no further action is required. For older DC/OS versions follow the instructions at https://docs.mesosphere.com/1.9/deploying-services/uninstall/#framework-cleaner to remove any persistent state if required."
+}
